@@ -1,0 +1,110 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #0f172a;
+  /* soft healthcare gradient background */
+  background: linear-gradient(180deg, #f7f9ff 0%, #f6f7fb 55%, #f6f7fb 100%);
+
+  --ink: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+
+  /* palette */
+  --primary: #2563eb;     /* blue */
+  --teal: #06b6d4;        /* cyan */
+  --success: #16a34a;     /* green */
+  --warn: #f59e0b;        /* amber */
+  --danger: #ef4444;      /* red */
+  --violet: #7c3aed;      /* violet */
+
+  --shadow: 0 10px 20px rgba(15, 23, 42, 0.07);
+}
+
+* { box-sizing: border-box; }
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.h1 { font-size: 22px; font-weight: 750; margin: 0; letter-spacing: -0.01em; }
+.h2 { font-size: 16px; font-weight: 750; margin: 0; color: var(--ink); }
+.muted { color: var(--muted); }
+
+.row { display: flex; gap: 12px; flex-wrap: wrap; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+
+@media (max-width: 980px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+}
+
+.p-14 { padding: 14px; }
+.p-16 { padding: 16px; }
+.p-18 { padding: 18px; }
+.mt-12 { margin-top: 12px; }
+.mt-18 { margin-top: 18px; }
+.mb-6 { margin-bottom: 6px; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+  font-size: 12px;
+}
+
+.kpi { font-size: 24px; font-weight: 850; color: var(--ink); }
+.kpi-sub { font-size: 12px; color: var(--muted); }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tabs {
+  display: inline-flex;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+}
+
+.tab {
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  border: 1px solid transparent;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.tab.active {
+  background: var(--primary);
+  color: white;
+}
+
+.select {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: white;
+}
+
+/* accent strip used by KPI cards */
+.accent {
+  border-left: 6px solid var(--primary);
+}
